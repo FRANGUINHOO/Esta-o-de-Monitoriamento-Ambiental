@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- 
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
- 
-    <title>Estação de Monitoramento Ambiental</title>
- 
-    <!-- Conecta o HTML ao CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento Ambiental</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
- 
+
     <header>
-        <h1>🌎 Estação de Monitoramento Ambiental</h1>
-        <p>Monitoramento ambiental em tempo real</p>
+        <h1>Monitoramento Ambiental</h1>
+        <p>Sistema de acompanhamento do ambiente</p>
     </header>
- 
+
     <main>
- 
+
         <section class="painel">
- 
+
             <div class="card">
-                <h2>🌡️ Temperatura</h2>
-                <p id="temperatura" class="valor">-- °C</p>
+                <h2>Temperatura</h2>
+                <p id="temperatura">-- °C</p>
             </div>
- 
+
             <div class="card">
-                <h2>💧 Umidade do Ar</h2>
-                <p id="umidade" class="valor">-- %</p>
+                <h2>Umidade</h2>
+                <p id="umidade">-- %</p>
             </div>
- 
+
             <div class="card">
-                <h2>☀️ Luminosidade</h2>
-                <p id="luminosidade" class="valor">-- %</p>
+                <h2>Luminosidade</h2>
+                <p id="luminosidade">-- %</p>
             </div>
- 
+
         </section>
- 
+
         <section class="status">
-            <h2>Situação do Ambiente</h2>
-            <p id="situacao">Aguardando dados...</p>
+
+            <h2>Situação do ambiente</h2>
+
+            <div class="status-box">
+
+                <span id="situacao-indicador"></span>
+
+                <p id="situacao">
+                    Aguardando leitura...
+                </p>
+
+            </div>
+
         </section>
- 
-        <section class="atualizacao">
+
+        <section class="controle">
+
             <p>
                 Última atualização:
-                <span id="horario">--:--</span>
+                <strong id="horario">--</strong>
             </p>
- 
+
             <button onclick="atualizarDados()">
                 Atualizar dados
             </button>
+
         </section>
- 
-        <section class="sobre">
-            <h2>Sobre o projeto</h2>
- 
-            <p>
-                Este projeto utiliza robótica, programação e sensores
-                para realizar o monitoramento das condições ambientais.
-            </p>
- 
-            <p>
-                O sistema será capaz de coletar dados de temperatura,
-                umidade do ar e luminosidade.
-            </p>
-        </section>
- 
+
     </main>
- 
+
     <footer>
-        <p>Projeto de Robótica — 3º Ano do Ensino Médio</p>
+        <p>Monitoramento Ambiental</p>
     </footer>
- 
-    <!-- Conecta o HTML ao JavaScript -->
+
     <script src="script.js"></script>
- 
+
 </body>
+
 </html>
