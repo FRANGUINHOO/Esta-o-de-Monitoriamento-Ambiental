@@ -1,58 +1,53 @@
-javascript
-function atualizarDados(){
 
-    let temperatura =
-        Math.floor(Math.random()*16)+20;
+function atualizarDados() {
 
-    let umidade =
-        Math.floor(Math.random()*41)+40;
+    let temperatura = Math.floor(Math.random() * 16) + 20;
+    let umidade = Math.floor(Math.random() * 41) + 40;
+    let luminosidade = Math.floor(Math.random() * 101);
 
-    let luminosidade =
-        Math.floor(Math.random()*101);
+    document.getElementById("temperatura").textContent =
+        temperatura + " °C";
 
+    document.getElementById("umidade").textContent =
+        umidade + " %";
 
-    document.getElementById("temperatura").innerText =
-        temperatura+" °C";
-
-    document.getElementById("umidade").innerText =
-        umidade+" %";
-
-    document.getElementById("luminosidade").innerText =
-        luminosidade+" %";
-
-
-    let situacao =
-        document.getElementById("situacao");
+    document.getElementById("luminosidade").textContent =
+        luminosidade + " %";
 
     let indicador =
         document.getElementById("situacao-indicador");
 
+    let situacao =
+        document.getElementById("situacao");
 
-    indicador.className="";
+    indicador.className = "";
 
+    if (temperatura < 25) {
 
-    if(temperatura<25){
-
-        situacao.innerText="Normal";
+        situacao.textContent = "Normal";
         indicador.classList.add("normal");
 
-    }else if(temperatura<30){
+    } else if (temperatura < 30) {
 
-        situacao.innerText="Atenção";
+        situacao.textContent = "Atenção";
         indicador.classList.add("atencao");
 
-    }else{
+    } else {
 
-        situacao.innerText="Temperatura alta";
+        situacao.textContent = "Temperatura alta";
         indicador.classList.add("critico");
     }
 
+    let agora = new Date();
 
-    document.getElementById("horario").innerText =
-        new Date().toLocaleString("pt-BR");
+    document.getElementById("horario").textContent =
+        agora.toLocaleString("pt-BR");
 }
 
 
+/* Atualiza assim que abrir */
 atualizarDados();
 
-setInterval(atualizarDados,5000);
+
+/* Atualiza automaticamente a cada 5 segundos */
+setInterval(atualizarDados, 5000);
