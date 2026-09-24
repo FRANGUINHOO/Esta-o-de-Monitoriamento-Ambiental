@@ -10,13 +10,12 @@ body{
     min-height:100vh;
     color:#e0f2fe;
     text-align:center;
-    background:
-        linear-gradient(#03152bdd,#061f35ee),
-        url("fundo.jpg") center/cover fixed;
+    background:url("fundo.jpg") center/cover fixed;
 }
 
 header{
     padding:35px 20px;
+    background:#03152dcc;
 }
 
 header h1{
@@ -33,6 +32,7 @@ main{
     width:90%;
     max-width:1000px;
     margin:auto;
+    padding:25px 0;
 }
 
 .painel{
@@ -41,10 +41,8 @@ main{
     gap:20px;
 }
 
-.card,
-.status-box,
-.controle{
-    background:#08243bdd;
+.card,.status-box,.controle{
+    background:#08243de6;
     border:1px solid #075985;
     border-radius:14px;
     padding:22px;
@@ -96,17 +94,9 @@ main{
     background:#64748b;
 }
 
-.normal{
-    background:#22c55e!important;
-}
-
-.atencao{
-    background:#facc15!important;
-}
-
-.critico{
-    background:#ef4444!important;
-}
+.normal{background:#22c55e!important}
+.atencao{background:#facc15!important}
+.critico{background:#ef4444!important}
 
 .controle{
     margin-top:20px;
@@ -138,12 +128,13 @@ button:hover{
 }
 
 footer{
-    padding:30px;
-    color:#64748b;
+    margin-top:20px;
+    padding:25px;
+    color:#94a3b8;
+    background:#03152dcc;
 }
 
 @media(max-width:700px){
-
     .painel{
         grid-template-columns:1fr;
     }

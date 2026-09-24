@@ -1,36 +1,68 @@
-```javascript id="q8v4nd"
-function atualizarDados(){
+javascript
+function atualizarDados() {
 
-let temperatura=Math.floor(Math.random()*16)+20;
-let umidade=Math.floor(Math.random()*41)+40;
-let luminosidade=Math.floor(Math.random()*101);
+    // DADOS SIMULADOS
 
-document.getElementById("temperatura").textContent=temperatura+" °C";
-document.getElementById("umidade").textContent=umidade+" %";
-document.getElementById("luminosidade").textContent=luminosidade+" %";
+    let temperatura =
+        Math.floor(Math.random() * 16) + 20;
 
-let situacao=document.getElementById("situacao");
-let indicador=document.getElementById("situacao-indicador");
+    let umidade =
+        Math.floor(Math.random() * 41) + 40;
 
-indicador.className="";
+    let luminosidade =
+        Math.floor(Math.random() * 101);
 
-if(temperatura<25){
-situacao.textContent="Condições normais";
-indicador.classList.add("normal");
+
+    // MOSTRAR DADOS NO HTML
+
+    document.getElementById("temperatura").innerText =
+        temperatura + " °C";
+
+    document.getElementById("umidade").innerText =
+        umidade + " %";
+
+    document.getElementById("luminosidade").innerText =
+        luminosidade + " %";
+
+
+    // ANALISAR TEMPERATURA
+
+    let situacao =
+        document.getElementById("situacao");
+
+    let indicador =
+        document.getElementById("situacao-indicador");
+
+
+    indicador.className = "";
+
+
+    if (temperatura < 25) {
+
+        situacao.innerText = "Normal";
+        indicador.classList.add("normal");
+
+    } else if (temperatura < 30) {
+
+        situacao.innerText = "Atenção";
+        indicador.classList.add("atencao");
+
+    } else {
+
+        situacao.innerText = "Temperatura alta";
+        indicador.classList.add("critico");
+    }
+
+
+    // DATA E HORÁRIO
+
+    let agora = new Date();
+
+    document.getElementById("horario").innerText =
+        agora.toLocaleString("pt-BR");
 }
-else if(temperatura<30){
-situacao.textContent="Atenção: temperatura elevada";
-indicador.classList.add("atencao");
-}
-else{
-situacao.textContent="Alerta: temperatura alta";
-indicador.classList.add("critico");
-}
 
-document.getElementById("horario").textContent=
-new Date().toLocaleString("pt-BR");
-}
+
+// EXECUTA AO ABRIR A PÁGINA
 
 atualizarDados();
-setInterval(atualizarDados,5000);
-```
