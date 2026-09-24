@@ -1,53 +1,52 @@
 
-function atualizarDados() {
+function atualizarDados(){
 
-    let temperatura = Math.floor(Math.random() * 16) + 20;
-    let umidade = Math.floor(Math.random() * 41) + 40;
-    let luminosidade = Math.floor(Math.random() * 101);
+    let temperatura =
+        Math.floor(Math.random()*16)+20;
+
+    let umidade =
+        Math.floor(Math.random()*41)+40;
+
+    let luminosidade =
+        Math.floor(Math.random()*101);
 
     document.getElementById("temperatura").textContent =
-        temperatura + " °C";
+        temperatura+" °C";
 
     document.getElementById("umidade").textContent =
-        umidade + " %";
+        umidade+" %";
 
     document.getElementById("luminosidade").textContent =
-        luminosidade + " %";
-
-    let indicador =
-        document.getElementById("situacao-indicador");
+        luminosidade+" %";
 
     let situacao =
         document.getElementById("situacao");
 
-    indicador.className = "";
+    let indicador =
+        document.getElementById("situacao-indicador");
 
-    if (temperatura < 25) {
+    indicador.className="";
 
-        situacao.textContent = "Normal";
+    if(temperatura<25){
+
+        situacao.textContent="Normal";
         indicador.classList.add("normal");
 
-    } else if (temperatura < 30) {
+    }else if(temperatura<30){
 
-        situacao.textContent = "Atenção";
+        situacao.textContent="Atenção";
         indicador.classList.add("atencao");
 
-    } else {
+    }else{
 
-        situacao.textContent = "Temperatura alta";
+        situacao.textContent="Temperatura alta";
         indicador.classList.add("critico");
     }
 
-    let agora = new Date();
-
     document.getElementById("horario").textContent =
-        agora.toLocaleString("pt-BR");
+        new Date().toLocaleString("pt-BR");
 }
 
-
-/* Atualiza assim que abrir */
 atualizarDados();
 
-
-/* Atualiza automaticamente a cada 5 segundos */
-setInterval(atualizarDados, 5000);
+setInterval(atualizarDados,5000);

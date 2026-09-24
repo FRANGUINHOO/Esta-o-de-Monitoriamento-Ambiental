@@ -1,167 +1,169 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    color: #eee7ff;
-    background: url("fundo.jpg") center center / cover fixed;
+body{
+    min-height:100vh;
+    color:#eee7ff;
+    background:url("fundo.jpg") center/cover fixed;
 }
 
-header {
-    text-align: center;
-    padding: 25px 15px;
-    background: rgba(20, 10, 40, 0.65);
+header{
+    text-align:center;
+    padding:22px 15px;
+    background:rgba(20,10,40,.45);
 }
 
-header h1 {
-    font-size: 25px;
-    margin-bottom: 6px;
+header h1{
+    font-size:24px;
+    margin-bottom:5px;
 }
 
-header p {
-    font-size: 13px;
-    color: #c4b5fd;
+header p{
+    font-size:12px;
+    color:#c4b5fd;
 }
 
-main {
-    width: 90%;
-    max-width: 900px;
-    margin: 25px auto;
+main{
+    width:90%;
+    max-width:850px;
+    margin:20px auto;
 }
 
-.painel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.painel{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
 }
 
-.card {
-    background: rgba(25, 15, 45, 0.9);
-    border: 1px solid #4c1d95;
-    border-radius: 10px;
-    padding: 18px;
-    text-align: center;
-    transition: 0.3s;
+.card,
+.status-box,
+.controle{
+    background:rgba(25,15,45,.88);
+    border:1px solid #4c1d95;
+    border-radius:9px;
+    padding:15px;
+    box-shadow:0 5px 15px #0007;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #a78bfa;
+.card{
+    text-align:center;
+    transition:.3s;
 }
 
-.card h2 {
-    font-size: 13px;
-    color: #c4b5fd;
-    margin-bottom: 10px;
+.card:hover{
+    transform:translateY(-3px);
+    border-color:#a78bfa;
 }
 
-.card p {
-    font-size: 28px;
-    font-weight: bold;
+.card h2{
+    font-size:11px;
+    color:#c4b5fd;
+    margin-bottom:8px;
 }
 
-.status {
-    margin-top: 20px;
+.card p{
+    font-size:24px;
+    font-weight:bold;
 }
 
-.status h2 {
-    font-size: 17px;
-    margin-bottom: 10px;
+.status{
+    margin-top:15px;
 }
 
-.status-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(25, 15, 45, 0.9);
-    border: 1px solid #4c1d95;
-    border-radius: 10px;
-    padding: 18px;
+.status h2{
+    font-size:15px;
+    margin-bottom:8px;
 }
 
-#situacao-indicador {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #64748b;
+.status-box{
+    display:flex;
+    align-items:center;
+    gap:9px;
 }
 
-.normal {
-    background: #22c55e !important;
+#situacao-indicador{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#64748b;
 }
 
-.atencao {
-    background: #facc15 !important;
+.normal{
+    background:#22c55e!important;
+    box-shadow:0 0 7px #22c55e;
 }
 
-.critico {
-    background: #ef4444 !important;
+.atencao{
+    background:#facc15!important;
+    box-shadow:0 0 7px #facc15;
 }
 
-#situacao {
-    font-size: 13px;
+.critico{
+    background:#ef4444!important;
+    box-shadow:0 0 7px #ef4444;
 }
 
-.controle {
-    margin-top: 15px;
-    padding: 16px;
-    background: rgba(25, 15, 45, 0.9);
-    border: 1px solid #4c1d95;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#situacao{
+    font-size:12px;
 }
 
-.controle p {
-    color: #c4b5fd;
-    font-size: 12px;
+.controle{
+    margin-top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.controle strong {
-    color: white;
+.controle p{
+    color:#c4b5fd;
+    font-size:11px;
 }
 
-button {
-    background: #6d28d9;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    padding: 9px 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.controle strong{
+    color:white;
 }
 
-button:hover {
-    background: #8b5cf6;
-    transform: scale(1.04);
+button{
+    background:#6d28d9;
+    color:white;
+    border:1px solid #8b5cf6;
+    border-radius:6px;
+    padding:6px 10px;
+    font-size:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #a78bfa;
-    font-size: 11px;
+button:hover{
+    background:#8b5cf6;
+    transform:scale(1.05);
 }
 
-@media (max-width: 700px) {
+footer{
+    text-align:center;
+    padding:18px;
+    color:#a78bfa;
+    font-size:10px;
+}
 
-    .painel {
-        grid-template-columns: 1fr;
+@media(max-width:700px){
+
+    .painel{
+        grid-template-columns:1fr;
     }
 
-    .controle {
-        flex-direction: column;
-        gap: 12px;
+    .controle{
+        flex-direction:column;
+        gap:10px;
     }
 
-    button {
-        width: 100%;
+    button{
+        width:auto;
     }
 }
