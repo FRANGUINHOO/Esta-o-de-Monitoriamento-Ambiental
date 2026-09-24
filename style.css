@@ -1,4 +1,4 @@
-
+css
 *{
     margin:0;
     padding:0;
@@ -9,18 +9,17 @@
 body{
     min-height:100vh;
     color:#e0f2fe;
-    text-align:center;
     background:url("fundo.jpg") center/cover fixed;
 }
 
 header{
+    text-align:center;
     padding:35px 20px;
-    background:#03152dcc;
+    background:rgba(3,21,45,.75);
 }
 
 header h1{
     font-size:30px;
-    color:#e0f2fe;
     margin-bottom:8px;
 }
 
@@ -31,8 +30,7 @@ header p{
 main{
     width:90%;
     max-width:1000px;
-    margin:auto;
-    padding:25px 0;
+    margin:30px auto;
 }
 
 .painel{
@@ -42,21 +40,21 @@ main{
 }
 
 .card,.status-box,.controle{
-    background:#08243de6;
+    background:rgba(5,30,55,.88);
     border:1px solid #075985;
     border-radius:14px;
     padding:22px;
-    backdrop-filter:blur(8px);
-    box-shadow:0 8px 25px #0006;
+    box-shadow:0 8px 25px #0008;
 }
 
 .card{
+    text-align:center;
     transition:.3s;
 }
 
 .card:hover{
+    transform:translateY(-4px);
     border-color:#38bdf8;
-    transform:translateY(-3px);
 }
 
 .card h2{
@@ -68,16 +66,13 @@ main{
 .card p{
     font-size:34px;
     font-weight:bold;
-    color:#f0f9ff;
 }
 
 .status{
-    text-align:left;
     margin-top:25px;
 }
 
 .status h2{
-    color:#e0f2fe;
     margin-bottom:10px;
 }
 
@@ -94,9 +89,17 @@ main{
     background:#64748b;
 }
 
-.normal{background:#22c55e!important}
-.atencao{background:#facc15!important}
-.critico{background:#ef4444!important}
+.normal{
+    background:#22c55e!important;
+}
+
+.atencao{
+    background:#facc15!important;
+}
+
+.critico{
+    background:#ef4444!important;
+}
 
 .controle{
     margin-top:20px;
@@ -110,7 +113,7 @@ main{
 }
 
 .controle strong{
-    color:#f0f9ff;
+    color:white;
 }
 
 button{
@@ -128,13 +131,13 @@ button:hover{
 }
 
 footer{
-    margin-top:20px;
+    text-align:center;
     padding:25px;
     color:#94a3b8;
-    background:#03152dcc;
 }
 
 @media(max-width:700px){
+
     .painel{
         grid-template-columns:1fr;
     }
@@ -142,6 +145,7 @@ footer{
     .controle{
         flex-direction:column;
         gap:15px;
+        text-align:center;
     }
 
     button{

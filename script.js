@@ -1,31 +1,25 @@
 javascript
-function atualizarDados() {
-
-    // DADOS SIMULADOS
+function atualizarDados(){
 
     let temperatura =
-        Math.floor(Math.random() * 16) + 20;
+        Math.floor(Math.random()*16)+20;
 
     let umidade =
-        Math.floor(Math.random() * 41) + 40;
+        Math.floor(Math.random()*41)+40;
 
     let luminosidade =
-        Math.floor(Math.random() * 101);
+        Math.floor(Math.random()*101);
 
-
-    // MOSTRAR DADOS NO HTML
 
     document.getElementById("temperatura").innerText =
-        temperatura + " °C";
+        temperatura+" °C";
 
     document.getElementById("umidade").innerText =
-        umidade + " %";
+        umidade+" %";
 
     document.getElementById("luminosidade").innerText =
-        luminosidade + " %";
+        luminosidade+" %";
 
-
-    // ANALISAR TEMPERATURA
 
     let situacao =
         document.getElementById("situacao");
@@ -34,35 +28,31 @@ function atualizarDados() {
         document.getElementById("situacao-indicador");
 
 
-    indicador.className = "";
+    indicador.className="";
 
 
-    if (temperatura < 25) {
+    if(temperatura<25){
 
-        situacao.innerText = "Normal";
+        situacao.innerText="Normal";
         indicador.classList.add("normal");
 
-    } else if (temperatura < 30) {
+    }else if(temperatura<30){
 
-        situacao.innerText = "Atenção";
+        situacao.innerText="Atenção";
         indicador.classList.add("atencao");
 
-    } else {
+    }else{
 
-        situacao.innerText = "Temperatura alta";
+        situacao.innerText="Temperatura alta";
         indicador.classList.add("critico");
     }
 
 
-    // DATA E HORÁRIO
-
-    let agora = new Date();
-
     document.getElementById("horario").innerText =
-        agora.toLocaleString("pt-BR");
+        new Date().toLocaleString("pt-BR");
 }
 
 
-// EXECUTA AO ABRIR A PÁGINA
-
 atualizarDados();
+
+setInterval(atualizarDados,5000);
